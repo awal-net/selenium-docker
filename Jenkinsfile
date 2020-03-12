@@ -15,7 +15,7 @@ pipeline {
         stage('Push Image') {
             steps {
 			    withCredentials([usernamePassword(credentialsId: 'awaldocker', passwordVariable: 'pass', usernameVariable: 'user')]) {
-			        sh "docker login --username=${user} --password=${pass}"
+			        sh "docker login --username=mdabdulawal --password=M1st3rH0m3"
 			        sh "docker push mdabdulawal/selenium-docker:latest"
 			    }                           
             }
